@@ -1,7 +1,7 @@
 # MWD Broken
 
-Broken by Mark Waldo Designs: model, apparel and clothing albums.
+Broken by Mark Waldo Designs: Models, Apparel PNGs, Clothing Photos, Videos, Stage try-on, and Log.
 
 Live site: https://mwdesigns1987-afk.github.io/mwd-broken/
 
-Images are stored as base64 bundles in `bundles/`; the workflow in `.github/workflows/pages.yml` decodes them and publishes to the `gh-pages` branch. File inventory: `mwd-broken-log.csv`.
+Images are base64 bundles in `bundles/`. The `mwdesigns1987-afk.github.io` repo runs a workflow that checks out this repo, runs `tools/unpack.py`, and publishes to `/mwd-broken/`. Inventory: `mwd-broken-log.csv`.

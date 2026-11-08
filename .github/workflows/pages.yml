@@ -1,28 +1,9 @@
-name: Build and publish site
+name: Check site bundle
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: true
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - uses: actions/checkout@v4
-      - name: Decode image bundles into _site
-        run: python3 tools/unpack.py
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-      - uses: actions/deploy-pages@v4
+      - run: python3 tools/unpack.py

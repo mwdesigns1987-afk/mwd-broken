@@ -5,19 +5,24 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
       - name: Decode image bundles into _site
         run: python3 tools/unpack.py
-      - name: Publish to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/configure-pages@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          force_orphan: true
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+      - uses: actions/deploy-pages@v4

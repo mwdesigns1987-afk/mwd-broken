@@ -389,3 +389,6 @@ c256786b40c63620e807a380389c79214fffbadc5297fb59075e0c6c713707b0.png,new upload,
 "061_Photo Nov 08 2026, 11 27 07 AM (2).png",folder3,(removed),,,,already in site (Domino)
 "062_Photo Nov 08 2026, 11 27 07 AM (3).png",folder3,(removed),,,,already in site (Static)
 "063_Photo Nov 08 2026, 1 38 36 PM (10).png",folder3,(removed),,,,near-duplicate of 236
+Broken Mod Girl 1.glb,dropbox sync,3D model,Broken Mod Girl,Broken Mod Girl,,"static mesh, not rigged; 1.16M tris -> 70k, textures to WebP; 3D slot 1"
+corset .glb,dropbox sync,3D clothing,,Broken cross-choker chain bodysuit,BRK-0154,"static mesh, not rigged; 286k -> 113k tris; fitted to Mod Girl"
+sample_2026-11-08T212000.107.glb,dropbox sync,3D clothing,,Broken halter corset with garters,BRK-0155,"static mesh, not rigged; 290k -> 102k tris; fitted to Mod Girl"
